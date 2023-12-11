@@ -36,9 +36,13 @@ public class W_ButtonsControl : MonoBehaviour
 
     public void ClickButton1()
     {
-        print("버튼1 눌림");
-        currentCashText.text = (currentCash + 10000).ToString();
-        currentBalanceText.text = (currentBalance - 10000).ToString();
+        currentCash += 10000;
+        currentCashText.text = currentCash.ToString();
+        currentBalance -= 10000;
+        currentBalanceText.text = currentBalance.ToString();
+
+        //currentCashText.text = (currentCash + 10000).ToString();
+        //currentBalanceText.text = (currentBalance - 10000).ToString();
         /* 
          * 버튼 클릭할 때마다 계속 작동되도록 하려면 어떻게 해야할까
          * currentCashText 또는 currentCash 를 update 해줘서 ..
@@ -52,17 +56,27 @@ public class W_ButtonsControl : MonoBehaviour
 
     public void ClickButton3()
     {
-        currentCashText.text = (currentCash + 30000).ToString();
-        currentBalanceText.text = (currentBalance - 30000).ToString();
+        currentCash += 30000;
+        currentCashText.text = currentCash.ToString();
+        currentBalance -= 30000;
+        currentBalanceText.text = currentBalance.ToString();
+
+        //currentCashText.text = (currentCash + 30000).ToString();
+        //currentBalanceText.text = (currentBalance - 30000).ToString();
     }
 
     public void ClickButton5()
     {
-        currentCashText.text = (currentCash + 50000).ToString();
-        currentBalanceText.text = (currentBalance - 50000).ToString();
+        currentCash += 50000;
+        currentCashText.text = currentCash.ToString();
+        currentBalance -= 50000;
+        currentBalanceText.text = currentBalance.ToString();
+
+        //currentCashText.text = (currentCash + 50000).ToString();
+        //currentBalanceText.text = (currentBalance - 50000).ToString();
     }
 
-    // TODO 직접입력버튼
+    // 직접입력버튼
     public void InputW()
     {
         currentBalance -= int.Parse(withdrawalInputField.text);

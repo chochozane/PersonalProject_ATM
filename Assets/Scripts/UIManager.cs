@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     //[SerializeField] private GameObject depositButtonUI;
     //[SerializeField] private GameObject withdrawalButtonUI;
 
+    //public int currentCash = 100000;
+    //public int currentBalance = 50000;
+
     private void Awake()
     {
         instance = this;
