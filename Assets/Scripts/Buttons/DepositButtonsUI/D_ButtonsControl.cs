@@ -21,6 +21,8 @@ public class D_ButtonsControl : MonoBehaviour
 
     [SerializeField] private TMP_InputField depositInputField;
 
+    [SerializeField] private GameObject popupMsgUI;
+
 
 
     // Start is called before the first frame update
@@ -42,18 +44,13 @@ public class D_ButtonsControl : MonoBehaviour
         currentBalance += 10000;
         currentBalanceText.text = currentBalance.ToString();
 
-        //currentCashText.text = (currentCash - 10000).ToString();
-        //currentBalanceText.text = (currentBalance + 10000).ToString();
-        /* 
-         * 버튼 클릭할 때마다 계속 작동되도록 하려면 어떻게 해야할까
-         * currentCashText 또는 currentCash 를 update 해줘서 ..
-         */
+        // TODO 팝업창 띄우기
+        if(int.Parse(currentCashText.text) < 0)
+        {
+            ShowWarning();
+        }
     }
 
-    //public void UpdateCash()
-    //{
-
-    //}
 
     public void ClickButton3()
     {
@@ -97,6 +94,11 @@ public class D_ButtonsControl : MonoBehaviour
     private void ShowWarning() // "잔액이 부족합니다" 팝업
     {
         //팝업 활성화
-        // 버튼 누르면 팝업 닫기
+        popupMsgUI.SetActive(true);
+    }
+
+    public void ClickPopupOkBtn() // 버튼 누르면 팝업 닫기
+    {
+        popupMsgUI.SetActive(false);
     }
 }
