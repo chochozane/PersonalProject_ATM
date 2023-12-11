@@ -18,18 +18,21 @@ public class D_ButtonsControl : MonoBehaviour
     [SerializeField] private GameObject depositButtonUI;
     [SerializeField] private GameObject withdrawalButtonUI;
 
+    [SerializeField] private TMP_InputField depositInputField;
+
+
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //void Start()
+    //{
+
+    //}
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //void Update()
+    //{
+
+    //}
 
     public void ClickButton1()
     {
@@ -60,7 +63,14 @@ public class D_ButtonsControl : MonoBehaviour
     }
 
     // TODO 직접입력버튼
+    public void InputD()
+    {
+        currentCash -= int.Parse(depositInputField.text);
+        currentCashText.text = currentCash.ToString();
 
+        currentBalance += int.Parse(depositInputField.text);
+        currentBalanceText.text = currentBalance.ToString();
+    }
     public void ClickCancelButton()
     {
         // 혹시나 추후에 기능구현 하다가 변동된 값이 Cancel 버튼 누르면 초기화 되는경우, 그냥 SetActive 로 진행하자 !

@@ -18,18 +18,21 @@ public class W_ButtonsControl : MonoBehaviour
     [SerializeField] private GameObject depositButtonUI;
     [SerializeField] private GameObject withdrawalButtonUI;
 
+    [SerializeField] private TMP_InputField withdrawalInputField;
+
+
 
     // Start is called before the first frame update
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
         
-    }
+    //}
 
     public void ClickButton1()
     {
@@ -60,6 +63,14 @@ public class W_ButtonsControl : MonoBehaviour
     }
 
     // TODO 직접입력버튼
+    public void InputW()
+    {
+        currentBalance -= int.Parse(withdrawalInputField.text);
+        currentBalanceText.text = currentBalance.ToString();
+
+        currentCash += int.Parse(withdrawalInputField.text);
+        currentCashText.text = currentCash.ToString();
+    }
 
     public void ClickCancelButton()
     {
