@@ -429,7 +429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &16986477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 38897997}
   - component: {fileID: 38898000}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: ButtonD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,6 +761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText: {fileID: 132947950}
   currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &77099978
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,8 +776,9 @@ GameObject:
   - component: {fileID: 77099982}
   - component: {fileID: 77099981}
   - component: {fileID: 77099980}
+  - component: {fileID: 77099983}
   m_Layer: 5
-  m_Name: Button3
+  m_Name: ButtonD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -844,7 +848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 77099981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 77099983}
+        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &77099981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +899,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77099978}
   m_CullTransparentMesh: 1
+--- !u!114 &77099983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77099978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &132947948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,8 +1198,9 @@ GameObject:
   - component: {fileID: 273011425}
   - component: {fileID: 273011424}
   - component: {fileID: 273011423}
+  - component: {fileID: 273011426}
   m_Layer: 5
-  m_Name: Button5
+  m_Name: ButtonD5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1236,7 +1270,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 273011424}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 273011426}
+        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickButton5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &273011424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,6 +1321,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273011421}
   m_CullTransparentMesh: 1
+--- !u!114 &273011426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273011421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &275985863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +1857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307134075}
   m_Layer: 5
-  m_Name: Button 3
+  m_Name: ButtonW_FreeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2670,8 +2733,9 @@ GameObject:
   - component: {fileID: 852554857}
   - component: {fileID: 852554856}
   - component: {fileID: 852554855}
+  - component: {fileID: 852554858}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ButtonW5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2741,7 +2805,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852554856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 852554858}
+        m_TargetAssemblyTypeName: W_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickButton5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &852554856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,6 +2856,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852554853}
   m_CullTransparentMesh: 1
+--- !u!114 &852554858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852554853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7b57a95d7ea904ea383b92f08d2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &950012193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,8 +3073,9 @@ GameObject:
   - component: {fileID: 1061083824}
   - component: {fileID: 1061083823}
   - component: {fileID: 1061083822}
+  - component: {fileID: 1061083825}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: ButtonWCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3051,7 +3145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1061083823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1061083825}
+        m_TargetAssemblyTypeName: W_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickCancelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1061083823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3090,6 +3196,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061083820}
   m_CullTransparentMesh: 1
+--- !u!114 &1061083825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061083820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7b57a95d7ea904ea383b92f08d2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &1079836833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,8 +3225,9 @@ GameObject:
   - component: {fileID: 1079836837}
   - component: {fileID: 1079836836}
   - component: {fileID: 1079836835}
+  - component: {fileID: 1079836838}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonW3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3173,7 +3297,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1079836836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1079836838}
+        m_TargetAssemblyTypeName: W_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079836836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3212,6 +3348,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079836833}
   m_CullTransparentMesh: 1
+--- !u!114 &1079836838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079836833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7b57a95d7ea904ea383b92f08d2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &1088618979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,9 +3394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ea2f6efe5a0da4e878ad10ef1dad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!4 &1088618981
 Transform:
   m_ObjectHideFlags: 0
@@ -4766,7 +4916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676135473}
   m_Layer: 5
-  m_Name: Button_FreeUI
+  m_Name: ButtonD_FreeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5078,7 +5228,7 @@ GameObject:
   - component: {fileID: 1728507393}
   - component: {fileID: 1728507392}
   m_Layer: 5
-  m_Name: Button_FreeDeposit
+  m_Name: ButtonD_FreeDeposit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5201,7 +5351,7 @@ GameObject:
   - component: {fileID: 1816121305}
   - component: {fileID: 1816121308}
   m_Layer: 5
-  m_Name: ButtonCancel
+  m_Name: ButtonDCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5334,8 +5484,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 0}
-  currentBalanceText: {fileID: 0}
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &1833479933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5819,7 +5972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1980932757
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5858,8 +6011,9 @@ GameObject:
   - component: {fileID: 1987305564}
   - component: {fileID: 1987305563}
   - component: {fileID: 1987305562}
+  - component: {fileID: 1987305565}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ButtonW_FreeWithdrawal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5968,6 +6122,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987305560}
   m_CullTransparentMesh: 1
+--- !u!114 &1987305565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987305560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7b57a95d7ea904ea383b92f08d2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &2012279781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5980,8 +6151,9 @@ GameObject:
   - component: {fileID: 2012279785}
   - component: {fileID: 2012279784}
   - component: {fileID: 2012279783}
+  - component: {fileID: 2012279786}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonW1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6051,7 +6223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2012279784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2012279786}
+        m_TargetAssemblyTypeName: W_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2012279784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6090,6 +6274,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012279781}
   m_CullTransparentMesh: 1
+--- !u!114 &2012279786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012279781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7b57a95d7ea904ea383b92f08d2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
 --- !u!1 &2080798082
 GameObject:
   m_ObjectHideFlags: 0
