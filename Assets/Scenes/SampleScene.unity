@@ -429,7 +429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &16986477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -624,8 +624,9 @@ GameObject:
   - component: {fileID: 38897999}
   - component: {fileID: 38897998}
   - component: {fileID: 38897997}
+  - component: {fileID: 38898000}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -695,7 +696,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 38897998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38898000}
+        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &38897998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +747,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38897995}
   m_CullTransparentMesh: 1
+--- !u!114 &38898000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38897995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 132947950}
+  currentBalanceText: {fileID: 2098027728}
 --- !u!1 &77099978
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +774,7 @@ GameObject:
   - component: {fileID: 77099981}
   - component: {fileID: 77099980}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,7 +895,7 @@ GameObject:
   - component: {fileID: 132947951}
   - component: {fileID: 132947950}
   m_Layer: 5
-  m_Name: Text_number
+  m_Name: Text_CashNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1139,7 +1166,7 @@ GameObject:
   - component: {fileID: 273011424}
   - component: {fileID: 273011423}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Button5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2297,7 +2324,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 663734994}
-        m_TargetAssemblyTypeName: MainButton_W, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainButton_D, Assembly-CSharp
         m_MethodName: ClickWithdrawalButton
         m_Mode: 1
         m_Arguments:
@@ -2355,7 +2382,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 663734989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 171b2a7157625de4cbb79f80c3a60d79, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b660f7a8940ce2478cec77152b547bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainButtonUI: {fileID: 1147445134}
@@ -3721,7 +3748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1147445135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4739,7 +4766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676135473}
   m_Layer: 5
-  m_Name: Button 3
+  m_Name: Button_FreeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4915,7 +4942,7 @@ GameObject:
   - component: {fileID: 1726660334}
   - component: {fileID: 1726660333}
   m_Layer: 5
-  m_Name: Text_cash
+  m_Name: Text_Cash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5051,7 +5078,7 @@ GameObject:
   - component: {fileID: 1728507393}
   - component: {fileID: 1728507392}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Button_FreeDeposit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5172,8 +5199,9 @@ GameObject:
   - component: {fileID: 1816121307}
   - component: {fileID: 1816121306}
   - component: {fileID: 1816121305}
+  - component: {fileID: 1816121308}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: ButtonCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5243,7 +5271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1816121306}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1816121308}
+        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
+        m_MethodName: ClickCancelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1816121306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5282,6 +5322,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816121303}
   m_CullTransparentMesh: 1
+--- !u!114 &1816121308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816121303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
 --- !u!1 &1833479933
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,7 +6343,7 @@ GameObject:
   - component: {fileID: 2098027729}
   - component: {fileID: 2098027728}
   m_Layer: 5
-  m_Name: Text_number
+  m_Name: Text_BalanceNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
