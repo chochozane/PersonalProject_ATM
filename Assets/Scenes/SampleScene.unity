@@ -761,9 +761,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText: {fileID: 0}
   currentBalanceText: {fileID: 0}
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
   depositInputField: {fileID: 1226841592}
   popupMsgUI: {fileID: 267160139}
 --- !u!1 &77099978
@@ -915,9 +912,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText: {fileID: 0}
   currentBalanceText: {fileID: 0}
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
   depositInputField: {fileID: 1226841592}
   popupMsgUI: {fileID: 267160139}
 --- !u!1 &132947948
@@ -1377,9 +1371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText: {fileID: 0}
   currentBalanceText: {fileID: 0}
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
   depositInputField: {fileID: 1226841592}
   popupMsgUI: {fileID: 267160139}
 --- !u!1 &275985863
@@ -1942,7 +1933,6 @@ GameObject:
   - component: {fileID: 396771264}
   - component: {fileID: 396771263}
   - component: {fileID: 396771262}
-  - component: {fileID: 396771265}
   m_Layer: 5
   m_Name: PopupOkButton
   m_TagString: Untagged
@@ -2015,8 +2005,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 396771265}
-        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
+      - m_Target: {fileID: 1088618980}
+        m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
         m_MethodName: ClickPopupOkBtn
         m_Mode: 1
         m_Arguments:
@@ -2065,25 +2055,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396771260}
   m_CullTransparentMesh: 1
---- !u!114 &396771265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396771260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCashText: {fileID: 0}
-  currentBalanceText: {fileID: 0}
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
-  depositInputField: {fileID: 1226841592}
-  popupMsgUI: {fileID: 267160139}
 --- !u!1 &421095990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,11 +4016,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCash: 100000
+  updatedCash: 0
   currentBalance: 50000
-  mainButtonUI: {fileID: 0}
-  depositButtonUI: {fileID: 0}
-  withdrawalButtonUI: {fileID: 0}
-  popupMsgUI: {fileID: 0}
+  updatedBalance: 0
+  updatedCashText: {fileID: 132947950}
+  updatedBalanceText: {fileID: 2098027728}
+  mainButtonUI: {fileID: 1147445134}
+  depositButtonUI: {fileID: 16986476}
+  withdrawalButtonUI: {fileID: 1980932756}
+  popupMsgUI: {fileID: 267160139}
 --- !u!4 &1088618981
 Transform:
   m_ObjectHideFlags: 0
@@ -6082,9 +6057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText: {fileID: 0}
   currentBalanceText: {fileID: 0}
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
   depositInputField: {fileID: 1226841592}
   popupMsgUI: {fileID: 267160139}
 --- !u!1 &1816121303
@@ -6236,9 +6208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCashText: {fileID: 0}
   currentBalanceText: {fileID: 0}
-  mainButtonUI: {fileID: 1147445134}
-  depositButtonUI: {fileID: 16986476}
-  withdrawalButtonUI: {fileID: 1980932756}
   depositInputField: {fileID: 1226841592}
   popupMsgUI: {fileID: 267160139}
 --- !u!1 &1833479933
