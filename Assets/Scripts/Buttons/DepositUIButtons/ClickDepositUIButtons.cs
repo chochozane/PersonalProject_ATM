@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class D_ButtonsControl : MonoBehaviour
+public class ClickDepositUIButtons : MonoBehaviour
 {
  
     // Start is called before the first frame update

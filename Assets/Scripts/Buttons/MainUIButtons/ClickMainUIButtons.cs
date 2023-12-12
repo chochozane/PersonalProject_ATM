@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainUIButtonsControl : MonoBehaviour
+public class ClickMainUIButtons : MonoBehaviour
 {
     
     [SerializeField] private GameObject mainButtonUI;

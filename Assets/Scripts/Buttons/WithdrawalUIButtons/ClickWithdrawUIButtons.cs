@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class W_ButtonsControl : MonoBehaviour
+public class ClickWithdrawUIButtons : MonoBehaviour
 {
  
     // Start is called before the first frame update
