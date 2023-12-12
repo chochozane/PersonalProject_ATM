@@ -9,14 +9,16 @@ public class ATMManager : MonoBehaviour
     public static ATMManager instance;
     
     // 기본 현금 및 잔액 과 현재 현금 및 잔액
-    private int _defaultCash = 100000;
-    public int currentCash = 100000;
-    public int updatedCash;
+    //private int _defaultCash = 100000;
+    private int currentCash = 100000;
+    private int updatedCash = 100000;
 
-    private int _defaulttBalance = 50000;
-    public int currentBalance = 50000;
-    public int updatedBalance;
+    //private int _defaulttBalance = 50000;
+    private int currentBalance = 50000;
+    private int updatedBalance = 50000;
 
+    //[SerializeField] private Text updatedCashText;
+    //[SerializeField] private Text updatedBalanceText;
     [SerializeField] private TextMeshProUGUI updatedCashText;
     [SerializeField] private TextMeshProUGUI updatedBalanceText;
 
@@ -29,6 +31,13 @@ public class ATMManager : MonoBehaviour
     // 팝업 창
     [SerializeField] private GameObject popupMsgUI;
 
+    // Input Field
+    [SerializeField] private TMP_InputField depositInputField;
+    [SerializeField] private TMP_InputField withdrawalInputField;
+
+    // 
+
+
     private void Awake()
     {
         instance = this;
@@ -38,24 +47,39 @@ public class ATMManager : MonoBehaviour
     void Start()
     {
         // 기본 현금과 잔액 설정..?
-        _defaultCash = 100000;
-        _defaulttBalance = 50000;
+        //_defaultCash = 100000;
+        //_defaulttBalance = 50000;
 
     }
 
     // Update is called once per frame
     //void Update()
     //{
+    //    
+    //}
 
+    //private void CheckBeforeDeposit() // 입금 전 체크
+    //{
+    //    if (int.Parse(updatedCashText.text) < 0) // 보유 현금보다 입금 금액이 더 많은 경우
+    //    {
+    //        ShowWarning(); // 에러 팝업 메세지 띄우기
+    //    }
     //}
 
     private void Deposit(int money) // 입금
     {
-        // TODO 팝업창 띄우기
-        if (updatedCash < money) // 현재 보유 현금보다 더 많이 입금하려고 하면
-        {
-            ShowWarning();// 에러 팝업 메세지 띄우기
-        }
+        /* 
+         * TODO 팝업창 띄우기
+         * 검사하자
+         * e.g.
+         * Check()
+        */
+
+        //if (money > updatedCash) // 현재 보유 현금보다 더 많이 입금하려고 하면
+        //{
+        //    ShowWarning();// 에러 팝업 메세지 띄우기
+        //}
+        //CheckBeforeDeposit();
 
         currentCash -= money;
         currentBalance += money;
@@ -82,10 +106,16 @@ public class ATMManager : MonoBehaviour
     {
         Deposit(50000);
     }
+
+    public void DepositByInputField()
+    {
+        Deposit(int.Parse(depositInputField.text));
+    }
+    
     private void Withdraw(int money) // 출금
     {
         // TODO 팝업창 띄우기
-        if (currentBalance < money) // 현재 잔액보다 더 많이 출금하려고 하면
+        if (currentBalance < int.Parse(updatedCashText.text)) // 현재 잔액보다 더 많이 출금하려고 하면
         {
             ShowWarning();// 에러 팝업 메세지 띄우기
         }
@@ -115,6 +145,11 @@ public class ATMManager : MonoBehaviour
         Withdraw(50000);
     }
 
+    public void WithdrawtByInputField()
+    {
+        Withdraw(int.Parse(withdrawalInputField.text));
+    }
+
     private void UpdateCash()
     {
         // 현재 보유 현금을 updatedCash 로 옮기기
@@ -140,8 +175,6 @@ public class ATMManager : MonoBehaviour
         updatedBalanceText.text = updatedBalance.ToString();
 
     }
-
-    // TODO Input Field 버튼
 
     //뒤로가기 버튼
     public void Cancel()

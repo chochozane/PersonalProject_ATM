@@ -6,16 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class W_ButtonsControl : MonoBehaviour
 {
-    // 현금 text 와 Balance(잔액) text
-    [SerializeField] private TextMeshProUGUI currentCashText;
-    [SerializeField] private TextMeshProUGUI currentBalanceText;
-
-    private int currentCash = 100000;
-    private int currentBalance = 50000;
-
-    [SerializeField] private TMP_InputField withdrawalInputField;
-
-
+ 
     // Start is called before the first frame update
     //void Start()
     //{
@@ -43,16 +34,11 @@ public class W_ButtonsControl : MonoBehaviour
         ATMManager.instance.Withdraw5();                
     }
 
-    // TODO 직접입력버튼
-    public void InputW()
+    public void ClickWithdrawInputFieldButton()
     {
-        currentBalance -= int.Parse(withdrawalInputField.text);
-        currentBalanceText.text = currentBalance.ToString();
-
-        currentCash += int.Parse(withdrawalInputField.text);
-        currentCashText.text = currentCash.ToString();
+        ATMManager.instance.WithdrawtByInputField();
     }
-
+    
     public void ClickCancelButton()
     {
         ATMManager.instance.Cancel();
