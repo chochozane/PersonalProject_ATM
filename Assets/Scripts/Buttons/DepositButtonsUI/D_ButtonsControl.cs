@@ -45,10 +45,10 @@ public class D_ButtonsControl : MonoBehaviour
         currentBalanceText.text = currentBalance.ToString();
 
         // TODO 팝업창 띄우기
-        if(int.Parse(currentCashText.text) < 0)
-        {
-            ShowWarning();
-        }
+        //if(int.Parse(UIManager.instance.currentCashText.text) < 0)
+        //{
+        //    ShowWarning();
+        //}
     }
 
 
@@ -81,6 +81,7 @@ public class D_ButtonsControl : MonoBehaviour
         currentBalance += int.Parse(depositInputField.text);
         currentBalanceText.text = currentBalance.ToString();
     }
+
     public void ClickCancelButton()
     {
         // 혹시나 추후에 기능구현 하다가 변동된 값이 Cancel 버튼 누르면 초기화 되는경우, 그냥 SetActive 로 진행하자 !

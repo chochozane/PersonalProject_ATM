@@ -759,8 +759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 132947950}
-  currentBalanceText: {fileID: 2098027728}
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
@@ -913,8 +913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 132947950}
-  currentBalanceText: {fileID: 2098027728}
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
@@ -1375,8 +1375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 132947950}
-  currentBalanceText: {fileID: 2098027728}
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
@@ -2077,8 +2077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 132947950}
-  currentBalanceText: {fileID: 2098027728}
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
@@ -3226,7 +3226,7 @@ RectTransform:
   m_Children:
   - {fileID: 267160140}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4026,7 +4026,7 @@ GameObject:
   - component: {fileID: 1088618981}
   - component: {fileID: 1088618980}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: ATMManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4044,6 +4044,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ea2f6efe5a0da4e878ad10ef1dad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCash: 100000
+  currentBalance: 50000
+  mainButtonUI: {fileID: 0}
+  depositButtonUI: {fileID: 0}
+  withdrawalButtonUI: {fileID: 0}
+  popupMsgUI: {fileID: 0}
 --- !u!4 &1088618981
 Transform:
   m_ObjectHideFlags: 0
@@ -4052,12 +4058,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088618979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 358.705, y: 107.085915, z: -0.58126026}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1098289233
 GameObject:
@@ -6074,8 +6080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 132947950}
-  currentBalanceText: {fileID: 2098027728}
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
@@ -6228,8 +6234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a056246cd2ca9478424627e6167c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCashText: {fileID: 132947950}
-  currentBalanceText: {fileID: 2098027728}
+  currentCashText: {fileID: 0}
+  currentBalanceText: {fileID: 0}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
