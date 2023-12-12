@@ -14,13 +14,11 @@ public class ClickMainUIButtons : MonoBehaviour
     {
         mainButtonUI.SetActive(false);
         depositButtonUI.SetActive(true);
-        //withdrawalButtonUI.SetActive(false);
     }
 
     public void ClickWithdrawalButton()
     {
         mainButtonUI.SetActive(false);
-        //depositButtonUI.SetActive(false);
         withdrawalButtonUI.SetActive(true);
     }
 }

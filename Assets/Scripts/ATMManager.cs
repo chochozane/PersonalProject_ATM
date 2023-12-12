@@ -8,19 +8,14 @@ public class ATMManager : MonoBehaviour
 {
     public static ATMManager instance;
     
-    // 기본 현금 및 잔액 과 현재 현금 및 잔액
-    //private int _defaultCash = 100000;
+    // 현금과 잔액
     private int currentCash = 100000;
-    private int updatedCash = 100000;
-
-    //private int _defaulttBalance = 50000;
     private int currentBalance = 50000;
-    private int updatedBalance = 50000;
 
-    //[SerializeField] private Text updatedCashText;
-    //[SerializeField] private Text updatedBalanceText;
-    [SerializeField] private TextMeshProUGUI updatedCashText;
-    [SerializeField] private TextMeshProUGUI updatedBalanceText;
+    //[SerializeField] private TextMeshProUGUI updatedCashText;
+    //[SerializeField] private TextMeshProUGUI updatedBalanceText;
+    [SerializeField] private TMP_Text CashText;
+    [SerializeField] private TMP_Text BalanceText;
 
 
     // 메인화면, 입금화면, 출금화면
@@ -35,8 +30,6 @@ public class ATMManager : MonoBehaviour
     [SerializeField] private TMP_InputField depositInputField;
     [SerializeField] private TMP_InputField withdrawalInputField;
 
-    // 
-
 
     private void Awake()
     {
@@ -44,13 +37,11 @@ public class ATMManager : MonoBehaviour
     }
 
     //Start is called before the first frame update
-    void Start()
-    {
-        // 기본 현금과 잔액 설정..?
-        //_defaultCash = 100000;
-        //_defaulttBalance = 50000;
-
-    }
+    //void Start()
+    //{
+        
+    //
+    //}
 
     // Update is called once per frame
     //void Update()
@@ -58,40 +49,23 @@ public class ATMManager : MonoBehaviour
     //    
     //}
 
-    //private void CheckBeforeDeposit() // 입금 전 체크
-    //{
-    //    if (int.Parse(updatedCashText.text) < 0) // 보유 현금보다 입금 금액이 더 많은 경우
-    //    {
-    //        ShowWarning(); // 에러 팝업 메세지 띄우기
-    //    }
-    //}
 
     private void Deposit(int money) // 입금
     {
-        /* 
-         * TODO 팝업창 띄우기
-         * 검사하자
-         * e.g.
-         * Check()
-        */
 
-        //if (money > updatedCash) // 현재 보유 현금보다 더 많이 입금하려고 하면
-        //{
-        //    ShowWarning();// 에러 팝업 메세지 띄우기
-        //}
-        //CheckBeforeDeposit();
+        if (money <= currentCash)
+        {
+            currentCash -= money;
+            currentBalance += money;
 
-        currentCash -= money;
-        currentBalance += money;
+            UpdateCashAndBalance();
 
-        // cash 와 balance 업데이트하고
-        UpdateCash();
-        UpdateBalance();
+        }
+        else // (money > currentCash) 현재 보유 현금보다 더 많이 입금하려고 하면
+        {
+            ShowWarning();
 
-        // 업데이트한 cash 와 balance 보여주기
-        ShowUpdatedCash();
-        ShowUpdatedBalance();
-
+        }
     }
 
     public void Deposit1()
@@ -114,22 +88,20 @@ public class ATMManager : MonoBehaviour
     
     private void Withdraw(int money) // 출금
     {
-        // TODO 팝업창 띄우기
-        if (currentBalance < int.Parse(updatedCashText.text)) // 현재 잔액보다 더 많이 출금하려고 하면
+
+        if (money <= currentBalance)
         {
-            ShowWarning();// 에러 팝업 메세지 띄우기
+            currentBalance -= money;
+            currentCash += money;
+
+            UpdateCashAndBalance();
+
+        }
+        else // (money > currentCash) 현재 보유 현금보다 더 많이 입금하려고 하면
+        {
+            ShowWarning();
         }
 
-        currentBalance -= money;
-        currentCash += money;
-
-        // cash 와 balance 업데이트하고
-        UpdateCash();
-        UpdateBalance();
-
-        // 업데이트한 cash 와 balance 보여주기
-        ShowUpdatedCash();
-        ShowUpdatedBalance();
     }
 
     public void Withdraw1()
@@ -150,36 +122,16 @@ public class ATMManager : MonoBehaviour
         Withdraw(int.Parse(withdrawalInputField.text));
     }
 
-    private void UpdateCash()
+    private void UpdateCashAndBalance()
     {
-        // 현재 보유 현금을 updatedCash 로 옮기기
-        updatedCash = currentCash;
-    }
-
-    private void ShowUpdatedCash()
-    {
-        // Cash 의 text 가져와서
-        updatedCashText.text = updatedCash.ToString();
-    }
-
-    private void UpdateBalance()
-    {
-        // 현재 잔액을 updatedBalance 로 옮기기
-        updatedBalance = currentBalance;
-
-    }
-
-    private void ShowUpdatedBalance()
-    {
-        // Balance 의 text 가져와서 연동
-        updatedBalanceText.text = updatedBalance.ToString();
+        CashText.text = currentCash.ToString();
+        BalanceText.text = currentBalance.ToString();
 
     }
 
     //뒤로가기 버튼
     public void Cancel()
     {
-        // 뒤로가기 버튼 누르면 메인UI화면으로
         mainButtonUI.SetActive(true);
         depositButtonUI.SetActive(false);
         withdrawalButtonUI.SetActive(false);
@@ -187,7 +139,6 @@ public class ATMManager : MonoBehaviour
 
     private void ShowWarning() // "잔액이 부족합니다" 팝업
     {
-        //팝업 활성화
         popupMsgUI.SetActive(true);
     }
 

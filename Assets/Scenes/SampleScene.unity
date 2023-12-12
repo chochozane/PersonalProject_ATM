@@ -4000,12 +4000,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ea2f6efe5a0da4e878ad10ef1dad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updatedCashText: {fileID: 132947950}
-  updatedBalanceText: {fileID: 2098027728}
+  currentCash: 100000
+  currentBalance: 50000
+  CashText: {fileID: 132947950}
+  BalanceText: {fileID: 2098027728}
   mainButtonUI: {fileID: 1147445134}
   depositButtonUI: {fileID: 16986476}
   withdrawalButtonUI: {fileID: 1980932756}
-  popupMsgUI: {fileID: 267160139}
+  popupMsgUI: {fileID: 791325733}
   depositInputField: {fileID: 1226841592}
   withdrawalInputField: {fileID: 1371033423}
 --- !u!1 &1098289233
@@ -4802,7 +4804,7 @@ GameObject:
   - component: {fileID: 1226841593}
   - component: {fileID: 1226841592}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: DepositInputField (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5056,7 +5058,7 @@ GameObject:
   - component: {fileID: 1371033424}
   - component: {fileID: 1371033423}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: WithdrawInputField (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5962,7 +5964,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1728507395}
-        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
+        m_TargetAssemblyTypeName: ClickDepositUIButtons, Assembly-CSharp
         m_MethodName: ClickDepositInputFieldButton
         m_Mode: 1
         m_Arguments:
