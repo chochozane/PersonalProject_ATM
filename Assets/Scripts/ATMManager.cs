@@ -11,8 +11,8 @@ public class ATMManager : MonoBehaviour
     private int currentBalance = 50000;
     private int updatedBalance = 50000;
 
-    //[SerializeField] private TextMeshProUGUI updatedCashText;
-    //[SerializeField] private TextMeshProUGUI updatedBalanceText;
+    //[SerializeField] private TextMeshProUGUI CashText;
+    //[SerializeField] private TextMeshProUGUI BalanceText;
     [SerializeField] private TMP_Text CashText;
     [SerializeField] private TMP_Text BalanceText;
 
@@ -51,7 +51,6 @@ public class ATMManager : MonoBehaviour
 
     private void Deposit(int money) // 입금
     {
-
         if (money <= updatedCash)
         {
             currentCash -= money;
@@ -86,7 +85,6 @@ public class ATMManager : MonoBehaviour
     
     private void Withdraw(int money) // 출금
     {
-
         if (money <= updatedBalance)
         {
             currentBalance -= money;
@@ -99,7 +97,6 @@ public class ATMManager : MonoBehaviour
         {
             ShowWarning();
         }
-
     }
 
     public void Withdraw1()
@@ -128,8 +125,8 @@ public class ATMManager : MonoBehaviour
 
     private void ShowUpdatedCashAndBalance()
     {
-        CashText.text = updatedCash.ToString();
-        BalanceText.text = updatedBalance.ToString();
+        CashText.text = updatedCash.ToString("#,##0");
+        BalanceText.text = updatedBalance.ToString("N0");
     }
 
     //뒤로가기 버튼
@@ -140,14 +137,9 @@ public class ATMManager : MonoBehaviour
         withdrawalButtonUI.SetActive(false);
     }
 
-    private void ShowWarning() // "잔액이 부족합니다" 팝업
+    // "잔액이 부족합니다" 팝업
+    private void ShowWarning()
     {
         popupMsgUI.SetActive(true);
     }
-
-    public void ClickPopupOkBtn() // 버튼 누르면 팝업 닫기
-    {
-        popupMsgUI.SetActive(false);
-    }
-
 }

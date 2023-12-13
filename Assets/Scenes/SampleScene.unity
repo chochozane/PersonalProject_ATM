@@ -964,7 +964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100000
+  m_text: 100,000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1921,6 +1921,7 @@ GameObject:
   - component: {fileID: 396771264}
   - component: {fileID: 396771263}
   - component: {fileID: 396771262}
+  - component: {fileID: 396771265}
   m_Layer: 5
   m_Name: PopupOkButton
   m_TagString: Untagged
@@ -1993,8 +1994,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088618982}
-        m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
+      - m_Target: {fileID: 396771265}
+        m_TargetAssemblyTypeName: ClickPopupOKButton, Assembly-CSharp
         m_MethodName: ClickPopupOkBtn
         m_Mode: 1
         m_Arguments:
@@ -2043,6 +2044,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396771260}
   m_CullTransparentMesh: 1
+--- !u!114 &396771265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396771260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809e43f56e2c1a94eaaec79bf3217ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupMsgUICanvas: {fileID: 791325733}
 --- !u!1 &421095990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,8 +4014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ea2f6efe5a0da4e878ad10ef1dad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCash: 100000
-  currentBalance: 50000
   CashText: {fileID: 132947950}
   BalanceText: {fileID: 2098027728}
   mainButtonUI: {fileID: 1147445134}
@@ -7275,7 +7287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50000
+  m_text: 50,000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

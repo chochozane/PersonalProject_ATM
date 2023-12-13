@@ -26,6 +26,5 @@ public class ClickWithdrawUIButtons : MonoBehaviour
     public void ClickCancelButton()
     {
         ATMManager.instance.Cancel();
-
     }
 }

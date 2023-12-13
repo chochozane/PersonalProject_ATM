@@ -15,7 +15,6 @@ public class ClickDepositUIButtons : MonoBehaviour
 
     public void ClickButton5()
     {
-
         ATMManager.instance.Deposit5();
     }
 
@@ -28,5 +27,4 @@ public class ClickDepositUIButtons : MonoBehaviour
     {
         ATMManager.instance.Cancel();
     }
-
 }
