@@ -23,8 +23,8 @@ public class ClickDepositUIButtons : MonoBehaviour
         ATMManager.instance.DepositByInputField();
     }
 
-    public void ClickCancelButton()
+    public void ClickBackButton()
     {
-        ATMManager.instance.Cancel();
+        ATMManager.instance.Back();
     }
 }

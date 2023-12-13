@@ -130,7 +130,7 @@ public class ATMManager : MonoBehaviour
     }
 
     //뒤로가기 버튼
-    public void Cancel()
+    public void Back()
     {
         mainButtonUI.SetActive(true);
         depositButtonUI.SetActive(false);

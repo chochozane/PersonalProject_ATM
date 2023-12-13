@@ -23,8 +23,8 @@ public class ClickWithdrawUIButtons : MonoBehaviour
         ATMManager.instance.WithdrawtByInputField();
     }
     
-    public void ClickCancelButton()
+    public void ClickBackButton()
     {
-        ATMManager.instance.Cancel();
+        ATMManager.instance.Back();
     }
 }

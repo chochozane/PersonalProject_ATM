@@ -3690,7 +3690,7 @@ GameObject:
   - component: {fileID: 1061083822}
   - component: {fileID: 1061083825}
   m_Layer: 5
-  m_Name: ButtonWCancel
+  m_Name: ButtonWBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3762,8 +3762,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1061083825}
-        m_TargetAssemblyTypeName: W_ButtonsControl, Assembly-CSharp
-        m_MethodName: ClickCancelButton
+        m_TargetAssemblyTypeName: ClickWithdrawUIButtons, Assembly-CSharp
+        m_MethodName: ClickBackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6051,7 +6051,7 @@ GameObject:
   - component: {fileID: 1816121305}
   - component: {fileID: 1816121308}
   m_Layer: 5
-  m_Name: ButtonDCancel
+  m_Name: ButtonDBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6123,8 +6123,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1816121308}
-        m_TargetAssemblyTypeName: D_ButtonsControl, Assembly-CSharp
-        m_MethodName: ClickCancelButton
+        m_TargetAssemblyTypeName: ClickDepositUIButtons, Assembly-CSharp
+        m_MethodName: ClickBackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
