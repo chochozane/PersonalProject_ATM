@@ -11,7 +11,7 @@ public class ATMManager : MonoBehaviour
     private int currentBalance = 50000;
     private int updatedBalance = 50000;
 
-
+    // Text
     [SerializeField] private TMP_Text CashText;
     [SerializeField] private TMP_Text BalanceText;
 
@@ -32,20 +32,6 @@ public class ATMManager : MonoBehaviour
     {
         instance = this;
     }
-
-    //Start is called before the first frame update
-    //void Start()
-    //{
-        
-    //
-    //}
-
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    
-    //}
-
 
     private void Deposit(int money) // 입금
     {
@@ -127,7 +113,7 @@ public class ATMManager : MonoBehaviour
         BalanceText.text = updatedBalance.ToString("N0");
     }
 
-    //뒤로가기 버튼
+    //뒤로가기 버튼 관련
     public void Back()
     {
         mainButtonUI.SetActive(true);
