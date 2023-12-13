@@ -11,11 +11,9 @@ public class ATMManager : MonoBehaviour
     private int currentBalance = 50000;
     private int updatedBalance = 50000;
 
-    //[SerializeField] private TextMeshProUGUI CashText;
-    //[SerializeField] private TextMeshProUGUI BalanceText;
+
     [SerializeField] private TMP_Text CashText;
     [SerializeField] private TMP_Text BalanceText;
-
 
     // 메인화면, 입금화면, 출금화면
     [SerializeField] private GameObject mainButtonUI;
