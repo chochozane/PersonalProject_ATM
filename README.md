@@ -1,6 +1,10 @@
 # [완료]개인과제_ATM 시스템 만들기
 
 ---
+### 🐾To improve : 
+- **ScriptableObjects 사용해보자 !**
+
+---
 ### ✨Things i did :
 - 필수요구사항
   - ✅ ATM 화면 구성
@@ -40,6 +44,7 @@
 
 ---
 ### 📌TO-DOs :
+- **ScriptableObjects 사용해보자 !**
 - 선택요구사항
   - ⬜ 로그인 기능
   - ⬜ 회원가입
@@ -71,10 +76,8 @@ ATMManager.cs - PopupMsgUI 에 PopupCanvas 를 넣었어야 했는데 Canvas 의
 - 사용하지 않는 이벤트 함수와 using 문들은 지워주는 습관 만들기
 - 유니티 상에서 폴더링 챙기기(e.g. Scripts 폴더 안에 여러 하위 폴더들을 만들어서 script 들 정리하기)
 
-해설강의가 올라오면 참고해서 남은 선택요구사항도 구현해보는 것을 목표로 하고 있다 !
-
-
-
+해설강의가 올라오면 참고해서 남은 선택요구사항도 구현해보는 것을 목표로 하고 있다 !<br>
+-> ***ScriptableObjects 사용해서 구현해보자 !***
 
 ---
 🤎🥨
